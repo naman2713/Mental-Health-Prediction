@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mental health prediction</title>     
+</head>
+<style>
+    body {
+        background-image: url("heart.jpg");  /* Sets the background image of the body */
+        background-repeat: no-repeat;  /* Prevents the background image from repeating */
+        background-size: cover;  /* Ensures the background image covers the entire viewport */
+    }
+</style>
+<body>
+
+<div class="login">
+    <center><h1>Mental health Prediction</h1></center> <!-- Centered heading -->
+
+    <form action="/out" method="post">
+      
+        <p> Age </p>
+        <p> <input type="text" name="age"/> </p> <br>
+
+        <!-- Dropdown for gender selection -->
+
+        <p>
+            <label for="gender">Gender</label><br>
+            <select name="gender">
+                <option value="Male"> Male </option>
+                <option value="Female"> Female </option>
+                <option value="Other"> Other </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for time spent on social media -->
+        
+        <p>
+            <label for="Time_spend">How often do you use social media?</label><br>
+            <select name="Time_spend">
+                <option value="1hr"> Less than 1 hour a day </option>
+                <option value="2hr"> 1-2 hours a day </option>
+                <option value="3hr"> 3-4 hours a day </option>
+                <option value="4hr"> More than 4 hours a day </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for feeling after using social media -->
+        <p>
+            <label for="feel">How do you feel after spending time on social media?</label><br>
+            <select name="feel">
+                <option value="Happy and relaxed"> Happy and relaxed </option>
+                <option value="Neutral"> Neutral </option>
+                <option value="Anxious or stressed"> Anxious or stressed </option>
+                <option value="Depressed or sad"> Depressed or sad </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for feeling left out -->
+        <p>
+            <label for="felt_left">Have you ever felt left out or excluded after seeing posts on social media?</label><br>
+            <select name="felt_left">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for avoiding real-life problems -->
+        <p>
+            <label for="avoid">Do you use social media to avoid real-life problems or responsibilities?</label><br>
+            <select name="avoid">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for social media affecting sleep -->
+        <p>
+            <label for="affect">How does social media affect your sleep?</label><br>
+            <select name="affect">
+                <option value="It doesn't affect my sleep"> It doesn't affect my sleep </option>
+                <option value="It slightly affects my sleep"> It slightly affects my sleep </option>
+                <option value="It moderately affects my sleep"> It moderately affects my sleep </option>
+                <option value="It significantly affects my sleep"> It significantly affects my sleep </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for feelings about time spent on social media -->
+        <p>
+            <label for="amount">How do you feel about the amount of time you spend on social media?</label><br>
+            <select name="amount">
+                <option value="I'm satisfied"> I'm satisfied </option>
+                <option value="I feel I could reduce it a bit"> I feel I could reduce it a bit </option>
+                <option value="I feel I spend too much time"> I feel I spend too much time </option>
+                <option value="I feel it's out of control"> I feel it's out of control </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for feeling pressure to post or engage -->
+        <p>
+            <label for="pressure">Do you feel pressure to post content or engage on social media?</label><br>
+            <select name="pressure">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for experiencing cyberbullying -->
+        <p>
+            <label for="experience">How often do you experience cyberbullying or negative interactions on social media?</label><br>
+            <select name="experience">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for constantly checking for notifications -->
+        <p>
+            <label for="worry">Do you find yourself constantly checking for notifications or updates?</label><br>
+            <select name="worry">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for distraction by social media -->
+        <p>
+            <label for="distracted">How often do you find yourself distracted by social media while working or studying?</label><br>
+            <select name="distracted">
+                <option value="Occasionally"> Occasionally </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="very_often"> very often </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for feelings about others' achievements -->
+        <p>
+            <label for="others">How do you feel when you see others' achievements on social media?</label><br>
+            <select name="others">
+                <option value="Motivated"> Motivated </option>
+                <option value="Indifferent"> Indifferent </option>
+                <option value="Jealous"> Jealous </option>
+                <option value="Depressed"> Depressed </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for sharing personal updates -->
+        <p>
+            <label for="share">How often do you share personal updates on social media?</label><br>
+            <select name="share">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+                <option value="Always">Always</option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for feeling anxious without social media -->
+        <p>
+            <label for="Anxious">How often do you feel anxious if you are unable to access social media?</label><br>
+            <select name="Anxious">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for comparing life to others -->
+        <p>
+            <label for="Follow">How often do you compare your life to those you follow on social media?</label><br>
+            <select name="Follow">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for interacting with people known only online -->
+        <p>
+            <label for="interact">How often do you interact with people you only know from social media?</label><br>
+            <select name="interact">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Dropdown for positive impact of social media -->
+        <p>
+            <label for="impact">How often do you feel that social media has a positive impact on your life?</label><br>
+            <select name="impact">
+                <option value="Never"> Never </option>
+                <option value="Rarely"> Rarely </option>
+                <option value="Sometimes"> Sometimes </option>
+                <option value="Often"> Often </option>
+            </select>
+        </p> <br>
+
+        <!-- Submit button -->
+
+        <a href="output.html" ></a><button type="submit" class="btn btn-primary btn-block btn-large" 
+        style="height:30px;width:200px">predict</button></a>
+        <br>
+    </form>
+
+    <!-- Placeholder for displaying prediction results -->
+
+    <p> <b> {{y}} </b> </p>
+
+</div>
+
+</body>
+</html>
+
+
+

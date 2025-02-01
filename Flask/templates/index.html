@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://img.freepik.com/free-vector/flat-world-mental-health-day-background_23-2149671209.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .login {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="login">
+        <center><h1>Mental Health Prediction</h1></center>
+        <form action="/out" method="post">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Time_spend">How often do you use social media?</label>
+                <select class="form-control" name="Time_spend" id="Time_spend">
+                    <option value="1hr">Less than 1 hour a day</option>
+                    <option value="2hr">1-2 hours a day</option>
+                    <option value="3hr">3-4 hours a day</option>
+                    <option value="4hr">More than 4 hours a day</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feel">How do you feel after spending time on social media?</label>
+                <select class="form-control" name="feel" id="feel">
+                    <option value="Happy and relaxed">Happy and relaxed</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Anxious or stressed">Anxious or stressed</option>
+                    <option value="Depressed or sad">Depressed or sad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="felt_left">Have you ever felt left out or excluded after seeing posts on social media?</label>
+                <select class="form-control" name="felt_left" id="felt_left">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="avoid">Do you use social media to avoid real-life problems or responsibilities?</label>
+                <select class="form-control" name="avoid" id="avoid">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="affect">How does social media affect your sleep?</label>
+                <select class="form-control" name="affect" id="affect">
+                    <option value="It doesn't affect my sleep">It doesn't affect my sleep</option>
+                    <option value="It slightly affects my sleep">It slightly affects my sleep</option>
+                    <option value="It moderately affects my sleep">It moderately affects my sleep</option>
+                    <option value="It significantly affects my sleep">It significantly affects my sleep</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">How do you feel about the amount of time you spend on social media?</label>
+                <select class="form-control" name="amount" id="amount">
+                    <option value="I'm satisfied">I'm satisfied</option>
+                    <option value="I feel I could reduce it a bit">I feel I could reduce it a bit</option>
+                    <option value="I feel I spend too much time">I feel I spend too much time</option>
+                    <option value="I feel it's out of control">I feel it's out of control</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pressure">Do you feel pressure to post content or engage on social media?</label>
+                <select class="form-control" name="pressure" id="pressure">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">How often do you experience cyberbullying or negative interactions on social media?</label>
+                <select class="form-control" name="experience" id="experience">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="worry">Do you find yourself constantly checking for notifications or updates?</label>
+                <select class="form-control" name="worry" id="worry">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="distracted">How often do you find yourself distracted by social media while working or studying?</label>
+                <select class="form-control" name="distracted" id="distracted">
+                    <option value="Occasionally">Occasionally</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="very_often">very often</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="others">How do you feel when you see others' achievements on social media?</label>
+                <select class="form-control" name="others" id="others">
+                    <option value="Motivated">Motivated</option>
+                    <option value="Indifferent">Indifferent</option>
+                    <option value="Jealous">Jealous</option>
+                    <option value="Depressed">Depressed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="share">How often do you share personal updates on social media?</label>
+                <select class="form-control" name="share" id="share">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Anxious">How often do you feel anxious if you are unable to access social media?</label>
+                <select class="form-control" name="Anxious" id="Anxious">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Follow">How often do you compare your life to those you follow on social media?</label>
+                <select class="form-control" name="Follow" id="Follow">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="interact">How often do you interact with people you only know from social media?</label>
+                <select class="form-control" name="interact" id="interact">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="impact">How often do you feel that social media has a positive impact on your life?</label>
+                <select class="form-control" name="impact" id="impact">
+                    <option value="Never">Never</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+
+        <p><b>{{y}}</b></p>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
